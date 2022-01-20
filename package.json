@@ -21,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/anphxyz/alog/issues"
   },
-  "homepage": "https://github.com/anphxyz/alog#readme",
-  "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^9.1.4"
-  }
+  "homepage": "https://github.com/anphxyz/alog#readme"
 }

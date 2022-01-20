@@ -50,11 +50,11 @@ class Alog {
    * @param {*} fname 
    * @param {*} txt 
    */
-  write(fname, txt) {
+  write(txt, fname = 'combined') {
     const os = require('os'),
       fs = require('fs'),
       date = new Date(),
-      realFName = [fname, os.hostname(), date.getDate(), date.getMonth() + 1, date.getFullYear(), '.txt'].join('-'),
+      realFName = [fname, os.hostname(), date.getDate(), date.getMonth() + 1, date.getFullYear(), '.log'].join('-'),
       folder = __dirname + '/logs/',
       path = folder + realFName;
     !fs.existsSync(folder) && fs.mkdirSync(folder);
