@@ -6,8 +6,8 @@
 const _COLOR = require('./configs/color.js');
 class Alog {
 
-  constructor() {
-
+  constructor(dirpath) {
+    this.dirpath = dirpath;
   }
   /**
   * 
@@ -55,7 +55,7 @@ class Alog {
       fs = require('fs'),
       date = new Date(),
       realFName = [fname, os.hostname(), date.getDate(), date.getMonth() + 1, date.getFullYear(), '.log'].join('-'),
-      folder = __dirname + '/logs/',
+      folder = this.dirpath + '/logs/',
       path = folder + realFName;
     !fs.existsSync(folder) && fs.mkdirSync(folder);
     fs.writeFile(path, txt + '\n', { flag: 'a' }, err => {
@@ -91,9 +91,9 @@ class Alog {
 
 // singleton
 let instance = null;
-exports.getInstance = () => {
+exports.getInstance = (dirpath = __dirname) => {
   if (!instance) {
-    instance = new Alog();
+    instance = new Alog(dirpath);
   }
   return instance;
 }

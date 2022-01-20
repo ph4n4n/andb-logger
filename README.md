@@ -23,18 +23,22 @@ III. Uninstall
 IV. Using
 
 ```js
-    const log = require('./index').getInstance();
+    const alog = require('alog-xyz').getInstance(__dirpath);
 
-    log.error('error');
+    alog.error('error');
     // ALOG-ERROR - 20/01/2022 10:31:08 > error
 
-    log.warning('warning');
+    alog.warning('warning');
     // ALOG-WARNING - 20/01/2022 10:31:08 > warning
 
-    log.info('info');
+    alog.info('info');
     // ALOG-INFO - 20/01/2022 10:31:08 > info
 
-    log.dev('dev');
+    alog.dev('dev');
     // ALOG-DEV - 20/01/2022 10:31:08 > dev
+
+    alog.write('log content');
+    // got log file at `__dirpath/logs/combined-DESKTOP-F2RK900-20-1-2022.log`
+
 
 ```
