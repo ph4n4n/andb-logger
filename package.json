@@ -1,6 +1,6 @@
 {
   "name": "alog-xyz",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "anph print log by color & by time",
   "main": "index.js",
   "scripts": {
