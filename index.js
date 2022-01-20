@@ -7,9 +7,9 @@ const _COLOR = require('./configs/color.js');
 class Alog {
 
   constructor(options) {
-    this.mode = options.mode;
-    this.dirpath = options.dirpath;
-    this.logName = options.logName;
+    this.mode = options.mode || 'production';
+    this.dirpath = options.dirpath || __dirname;
+    this.logName = options.logName || 'ALOG';
   }
   /**
   * 
