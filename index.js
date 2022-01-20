@@ -10,20 +10,9 @@ class Alog {
 
   }
   /**
-   * 
-   * @returns 
-   */
-  logTime() {
-    const date = new Date()//+ 7 in hour -> GMT +7
-    const datime = new Date(date.valueOf() + date.getTimezoneOffset() * 60000);
-    return this.dateFmt(datime) + ' ' + this.hmsFmt(datime);
-  }
-
-
-  /**
-   * 
-   * 
-   */
+  * 
+  * 
+  */
   info() {
     const args = Array.prototype.slice.call(arguments);
     args.unshift(`${_COLOR.FgCyan} ALOG-INFO - ${this.logTime()} >${_COLOR.Reset}`);
@@ -73,6 +62,16 @@ class Alog {
       if (err)
         throw new Error(err);
     });
+  }
+
+  /**
+  * 
+  * @returns 
+  */
+  logTime() {
+    const date = new Date()//+ 7 in hour -> GMT +7
+    const datime = new Date(date.valueOf() + date.getTimezoneOffset() * 60000);
+    return this.dateFmt(datime) + ' ' + this.hmsFmt(datime);
   }
 
   padLeft = num => num < 10 ? '0' + num : num
