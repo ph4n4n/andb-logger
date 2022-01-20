@@ -1,0 +1,29 @@
+{
+  "name": "alog",
+  "version": "1.0.0",
+  "description": "anph print log by color & by time",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anphxyz/alog.git"
+  },
+  "keywords": [
+    "alog",
+    "logger",
+    "anph",
+    "anphxyz"
+  ],
+  "author": "anphxyz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anphxyz/alog/issues"
+  },
+  "homepage": "https://github.com/anphxyz/alog#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.4"
+  }
+}
