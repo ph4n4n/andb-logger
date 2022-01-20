@@ -2,11 +2,19 @@ I. Description
 
 This is a simple logger by color and time with 5 basic method:
 
+
+1. Basic method:
     info
     error
     warning
     dev
     write
+
+2. Note:
+by using above function to start to use `alog-xyz` logName is optional with defaul value is `ALOG`
+``` js
+    getInstance(__dirpath, logName)
+```
 
 II. Install
 
@@ -23,7 +31,7 @@ III. Uninstall
 IV. Using
 
 ```js
-    const alog = require('alog-xyz').getInstance(__dirpath);
+    const alog = require('alog-xyz').getInstance(__dirpath, logName);
 
     alog.error('error');
     // ALOG-ERROR - 20/01/2022 10:31:08 > error

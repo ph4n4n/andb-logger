@@ -6,8 +6,9 @@
 const _COLOR = require('./configs/color.js');
 class Alog {
 
-  constructor(dirpath) {
+  constructor(dirpath, logName = 'ALOG') {
     this.dirpath = dirpath;
+    this.logName = logName;
   }
   /**
   * 
@@ -15,7 +16,7 @@ class Alog {
   */
   info() {
     const args = Array.prototype.slice.call(arguments);
-    args.unshift(`${_COLOR.FgCyan} ALOG-INFO - ${this.logTime()} >${_COLOR.Reset}`);
+    args.unshift(`${_COLOR.FgCyan} ${this.logName}-INFO - ${this.logTime()} >${_COLOR.Reset}`);
     console.log.apply(console, args);
   }
   /**
@@ -23,7 +24,7 @@ class Alog {
    */
   error() {
     const args = Array.prototype.slice.call(arguments);
-    args.unshift(`${_COLOR.FgRed} ALOG-ERROR - ${this.logTime()} >${_COLOR.Reset}`);
+    args.unshift(`${_COLOR.FgRed} ${this.logName}-ERROR - ${this.logTime()} >${_COLOR.Reset}`);
     console.log.apply(console, args);
   }
   /**
@@ -31,7 +32,7 @@ class Alog {
    */
   warning() {
     const args = Array.prototype.slice.call(arguments);
-    args.unshift(`${_COLOR.FgYellow} ALOG-WARNING - ${this.logTime()} >${_COLOR.Reset}`);
+    args.unshift(`${_COLOR.FgYellow} ${this.logName}-WARNING - ${this.logTime()} >${_COLOR.Reset}`);
     console.log.apply(console, args);
   }
   /**
@@ -41,7 +42,7 @@ class Alog {
     const { NODE_ENV: env = 'development' } = process.env;
     if (env === 'development') {
       const args = Array.prototype.slice.call(arguments);
-      args.unshift(`${_COLOR.FgMagenta} ALOG-DEV - ${this.logTime()} >${_COLOR.Reset}`);
+      args.unshift(`${_COLOR.FgMagenta} ${this.logName}-DEV - ${this.logTime()} >${_COLOR.Reset}`);
       console.log.apply(console, args);
     }
   }
