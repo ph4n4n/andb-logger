@@ -6,7 +6,8 @@
 const _COLOR = require('./configs/color.js');
 class Alog {
 
-  constructor(dirpath, logName = 'ALOG') {
+  constructor(mode, dirpath, logName) {
+    this.mode = mode;
     this.dirpath = dirpath;
     this.logName = logName;
   }
@@ -39,8 +40,7 @@ class Alog {
    * 
    */
   dev() {
-    const { NODE_ENV: env = 'development' } = process.env;
-    if (env === 'development') {
+    if (this.mode === 'development') {
       const args = Array.prototype.slice.call(arguments);
       args.unshift(`${_COLOR.FgMagenta} ${this.logName}-DEV - ${this.logTime()} >${_COLOR.Reset}`);
       console.log.apply(console, args);
@@ -92,9 +92,9 @@ class Alog {
 
 // singleton
 let instance = null;
-exports.getInstance = (dirpath = __dirname) => {
+exports.getInstance = (mode, dirpath = __dirname, logName = 'ALOG') => {
   if (!instance) {
-    instance = new Alog(dirpath);
+    instance = new Alog(mode, dirpath, logName);
   }
   return instance;
 }
