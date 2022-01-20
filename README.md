@@ -5,10 +5,12 @@ I. Description
     > `warning`
     > `dev`
     > `write`
+
 II. Install
 ``` bash
     npm i alog-xyz
 ```
+
 II. Using
 
 ```js
