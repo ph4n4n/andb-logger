@@ -6,10 +6,10 @@
 const _COLOR = require('./configs/color.js');
 class Alog {
 
-  constructor(mode, dirpath, logName) {
-    this.mode = mode;
-    this.dirpath = dirpath;
-    this.logName = logName;
+  constructor(options) {
+    this.mode = options.mode;
+    this.dirpath = options.dirpath;
+    this.logName = options.logName;
   }
   /**
   * 
@@ -92,9 +92,9 @@ class Alog {
 
 // singleton
 let instance = null;
-exports.getInstance = (mode, dirpath = __dirname, logName = 'ALOG') => {
+exports.getInstance = (options) => {
   if (!instance) {
-    instance = new Alog(mode, dirpath, logName);
+    instance = new Alog(options);
   }
   return instance;
 }
