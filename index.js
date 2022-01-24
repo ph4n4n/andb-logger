@@ -92,7 +92,7 @@ class Alog {
 
 // singleton
 let instance = null;
-exports.getInstance = (options) => {
+exports.getLogger = (options) => {
   if (!instance) {
     instance = new Alog(options);
   }
