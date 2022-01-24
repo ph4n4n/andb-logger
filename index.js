@@ -75,19 +75,25 @@ class Alog {
     return this.dateFmt(datime) + ' ' + this.hmsFmt(datime);
   }
 
-  padLeft = num => num < 10 ? '0' + num : num
+  padLeft(num) {
+    return num < 10 ? '0' + num : num
+  }
 
-  dateFmt = (datime) => [
-    this.padLeft(datime.getDate()),
-    this.padLeft(datime.getMonth() + 1),
-    datime.getFullYear()
-  ].join('/')
+  dateFmt(datime) {
+    return [
+      this.padLeft(datime.getDate()),
+      this.padLeft(datime.getMonth() + 1),
+      datime.getFullYear()
+    ].join('/')
+  }
 
-  hmsFmt = (datime) => [
-    this.padLeft(datime.getHours() + 7),
-    this.padLeft(datime.getMinutes()),
-    this.padLeft(datime.getSeconds())
-  ].join(':')
+  hmsFmt(datime) {
+    return [
+      this.padLeft(datime.getHours() + 7),
+      this.padLeft(datime.getMinutes()),
+      this.padLeft(datime.getSeconds())
+    ].join(':')
+  }
 }
 
 // singleton
