@@ -104,3 +104,10 @@ exports.getLogger = (options) => {
   }
   return instance;
 }
+
+exports.getInstance = (options) => {
+  if (!instance) {
+    instance = new Alog(options);
+  }
+  return instance;
+}
