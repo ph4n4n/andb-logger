@@ -40,7 +40,7 @@ class Alog {
    * 
    */
   dev() {
-    if (this.mode === 'development') {
+    if (['development', 'dev'].includes(this.mode.toLowerCase())) {
       const args = Array.prototype.slice.call(arguments);
       args.unshift(`${_COLOR.FgMagenta} ${this.logName}-DEV - ${this.logTime()} >${_COLOR.Reset}`);
       console.log.apply(console, args);
