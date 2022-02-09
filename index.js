@@ -98,16 +98,15 @@ class Alog {
 
 // singleton
 let instance = null;
-exports.getLogger = (options) => {
+
+function getInstance(options) {
   if (!instance) {
     instance = new Alog(options);
   }
   return instance;
 }
 
-exports.getInstance = (options) => {
-  if (!instance) {
-    instance = new Alog(options);
-  }
-  return instance;
+module.exports = {
+  getLogger: getInstance,
+  getInstance,
 }
