@@ -31,7 +31,11 @@ III. Uninstall
 IV. Using
 
 ```js
-    const alog = require('alog-xyz').getInstance(__dirpath, logName);
+    const alog = require('alog-xyz').getInstance({
+         mode: 'DEV',
+      dirpath: __dirname,
+      logName: 'ALOG'
+    });
 
     alog.error('error');
     // ALOG-ERROR - 20/01/2022 10:31:08 > error
