@@ -1,25 +1,44 @@
 {
-  "name": "alog-xyz",
-  "version": "1.0.11",
-  "description": "anph print log by color & by time",
-  "main": "index.js",
+  "name": "@andb/logger",
+  "version": "1.0.0",
+  "description": "A lightweight Node.js logging utility with color support, customizable icon themes, time formatting, and file logging capabilities",
+  "main": "service/logger.js",
   "scripts": {
-    "test": "test"
+    "test": "node example/my-app.js",
+    "demo": "node example/my-app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anphxyz/alog.git"
   },
   "keywords": [
-    "alog",
     "logger",
-    "anph",
-    "anphxyz"
+    "logging",
+    "console",
+    "color",
+    "themes",
+    "icons",
+    "timestamp",
+    "file-logging",
+    "nodejs",
+    "javascript",
+    "utility",
+    "debug",
+    "development",
+    "production"
   ],
   "author": "anphxyz",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/anphxyz/alog/issues"
   },
-  "homepage": "https://github.com/anphxyz/alog#readme"
+  "homepage": "https://github.com/anphxyz/alog#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "service/",
+    "configs/",
+    "index.js"
+  ]
 }
