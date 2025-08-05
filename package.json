@@ -1,5 +1,5 @@
 {
-  "name": "@andb/logger",
+  "name": "@andb68/logger",
   "version": "1.0.0",
   "description": "A lightweight Node.js logging utility with color support, customizable icon themes, time formatting, and file logging capabilities",
   "main": "service/logger.js",
