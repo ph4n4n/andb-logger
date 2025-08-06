@@ -1,4 +1,4 @@
-# @andb68/logger - Simple Color Logger
+# andb-logger - Simple Logger
 
 A lightweight Node.js logging utility with color, icons support, time formatting, file logging capabilities, and customizable icon themes.
 

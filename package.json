@@ -1,6 +1,6 @@
 {
   "name": "andb-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight Node.js logging utility with color support, customizable icon themes, time formatting, and file logging capabilities",
   "main": "service/logger.js",
   "scripts": {

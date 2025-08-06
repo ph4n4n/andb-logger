@@ -28,7 +28,7 @@ class AndbLogger {
   constructor(options = {}) {
     this.mode = options.mode || 'production';
     this.dirpath = options.dirpath || __dirname;
-    this.logName = options.logName || 'ANDB';
+    this.logName = options.logName || 'ANDBLOGGER';
     this.timeZone = options.timeZone || 7; // GMT+7
     this.theme = options.theme || 'classic';
     this.icons = _ICONS[this.theme] || _ICONS.classic;
