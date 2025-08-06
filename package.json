@@ -1,6 +1,6 @@
 {
-  "name": "@andb68/logger",
-  "version": "1.0.0",
+  "name": "andb-logger",
+  "version": "1.0.1",
   "description": "A lightweight Node.js logging utility with color support, customizable icon themes, time formatting, and file logging capabilities",
   "main": "service/logger.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anphxyz/alog.git"
+    "url": "git+https://github.com/ph4n4n/andb-logger.git"
   },
   "keywords": [
     "logger",
@@ -30,9 +30,9 @@
   "author": "anphxyz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anphxyz/alog/issues"
+    "url": "https://github.com/ph4n4n/andb-logger/issues"
   },
-  "homepage": "https://github.com/anphxyz/alog#readme",
+  "homepage": "https://github.com/ph4n4n/andb-logger#readme",
   "engines": {
     "node": ">=12.0.0"
   },

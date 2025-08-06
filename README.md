@@ -14,13 +14,13 @@ A lightweight Node.js logging utility with color, icons support, time formatting
 ## Installation
 
 ```bash
-npm install @andb/logger
+npm install andb-logger
 ```
 
 ## Quick Start
 
 ```javascript
-const logger = require('@andb/logger').getInstance({
+const logger = require('andb-logger').getInstance({
   mode: 'development',
   dirpath: __dirname,
   logName: 'MYAPP',
@@ -70,7 +70,7 @@ AndbLogger comes with 10 pre-built icon themes to make your logs more visual and
 
 #### Set Theme on Initialization
 ```javascript
-const logger = require('@andb/logger').getInstance({
+const logger = require('andb-logger').getInstance({
   theme: 'tech'  // Use tech theme
 });
 ```
@@ -112,7 +112,7 @@ logger.setTheme('minimal'); // Switch to minimal theme
 ### Configuration
 
 ```javascript
-const logger = require('@andb/logger').getInstance({
+const logger = require('andb-logger').getInstance({
   mode: 'production',        // 'production' | 'development' | 'dev'
   dirpath: __dirname,        // Directory for log files
   logName: 'logger',         // Logger name prefix
@@ -179,7 +179,7 @@ logger.write('Custom log message', 'api');
 ### Basic Usage with Theme
 
 ```javascript
-const logger = require('@andb/logger').getInstance({
+const logger = require('andb-logger').getInstance({
   theme: 'faces'  // Use expressive face icons
 });
 
@@ -192,7 +192,7 @@ logger.dev('Debug information'); // 🤔
 ### Theme Switching
 
 ```javascript
-const logger = require('@andb/logger').getInstance();
+const logger = require('andb-logger').getInstance();
 
 // Start with classic theme
 logger.info('Server starting...');
@@ -209,7 +209,7 @@ logger.info('Server ready');
 ### Environment-Based Themes
 
 ```javascript
-const logger = require('@andb/logger').getInstance({
+const logger = require('andb-logger').getInstance({
   mode: process.env.NODE_ENV,
   theme: process.env.NODE_ENV === 'development' ? 'emoji' : 'minimal'
 });
